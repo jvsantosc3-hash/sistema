@@ -1,0 +1,19 @@
+# ==============================================================================
+# CONFIGURAÇÃO DE DEPLOY NO NETLIFY - DESKFLOW ITSM
+# ==============================================================================
+
+[build]
+  # Comando de build do projeto Vite + React
+  command = "npm run build"
+  # Diretório de publicação dos arquivos compilados
+  publish = "dist"
+
+# Redirecionamento SPA (Single Page Application) para que o reload de rotas funcione
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Variáveis de ambiente padrão para o Node
+[build.environment]
+  NODE_VERSION = "20"
